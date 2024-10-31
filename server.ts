@@ -11,7 +11,7 @@ class App {
 
     constructor() {
         this.app = express();
-        this.port = 8000;
+        this.port = 8080;
 
         this.configureMiddleware();
         this.connectDatabase();
@@ -37,7 +37,7 @@ class App {
     }
 
     private initializeRoutes(): void {
-        this.app.use('/health', (req, res) => {
+        this.app.use('/', (req, res) => {
             res.status(200).json({ msg: "Server is healthy" });
         })
         this.app.use('/user', userRoute);
