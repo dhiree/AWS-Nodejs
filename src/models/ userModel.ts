@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema({
         enum: ["user", "hotel"],
         default: "user"
     }
+
 }, {
     timestamps: true
 });
