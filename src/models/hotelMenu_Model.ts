@@ -26,6 +26,7 @@ const MenuSchemaSchema = new mongoose.Schema(
             enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage', 'Side Dish'],
             default: 'Main Course'
         },
+
         price: {
             type: Number,
             required: true,
