@@ -20,6 +20,7 @@ const MenuSchemaSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
+
         category: {
             type: String,
             enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage', 'Side Dish'],
