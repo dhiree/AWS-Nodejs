@@ -1,0 +1,29 @@
+# .github/workflows/ci-cd-pipeline.yml
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # List files in the root directory for debugging
+      - name: List files in the root directory
+        run: ls -al
+
+      # List files in the docker directory to verify Dockerfile location
+      - name: List files in the docker directory
+        run: ls -al docker/
+
+      # Build Docker image
+      - name: Build the Docker image
+        run: docker build -f docker/Dockerfile -t dhiree/cicd-pipeline:latest .
