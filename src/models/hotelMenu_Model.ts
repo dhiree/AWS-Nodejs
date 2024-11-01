@@ -15,6 +15,7 @@ const MenuSchemaSchema = new mongoose.Schema(
             required: true,
             trim: true
         },
+
         itemDescription: {
             type: String,
             trim: true
